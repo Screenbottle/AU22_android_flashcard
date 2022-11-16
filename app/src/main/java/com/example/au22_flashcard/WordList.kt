@@ -9,13 +9,13 @@ class WordList() {
     }
 
 
-    fun initializeWords() {
-        val word = Word("Hello", "Hej")
+    private fun initializeWords() {
+        val word = Word(0, "Hello", "Hej")
         wordList.add(word)
-        wordList.add(Word("Good bye", "Hej då"))
-        wordList.add(Word("Thank you", "Tack"))
-        wordList.add(Word("Welcome", "Välkommen"))
-        wordList.add(Word("Computer", "Dator"))
+        wordList.add(Word(1, "Good bye", "Hej då"))
+        wordList.add(Word(2, "Thank you", "Tack"))
+        wordList.add(Word(3, "Welcome", "Välkommen"))
+        wordList.add(Word(4, "Computer", "Dator"))
 
     }
 
@@ -43,7 +43,7 @@ class WordList() {
             usedWords.clear()
         }
 
-        var word : Word? = null
+        var word: Word?
 
         do {
             val rnd = (0 until wordList.size).random()

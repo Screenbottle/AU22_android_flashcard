@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AU22_flashcard</string>
+    <string name="english">English</string>
+    <string name="swedish">Swedish</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter">Submit Word</string>
+    <string name="empty_list">There are currently no words saved, please enter some</string>
+    <string name="delete">Delete Word</string>
 </resources>
