@@ -3,12 +3,10 @@ package com.example.au22_flashcard
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.au22_flashcard.databinding.ActivityMainBinding
 import android.view.MotionEvent
 import android.widget.Button
 import android.widget.TextView
-
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -119,9 +117,8 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         if (word != null && wordList.size >= 1) {
             launch(Dispatchers.IO) {
                 db.wordDao.delete(word)
+                updateWords()
             }
-
-            updateWords()
         }
     }
 

@@ -33,11 +33,9 @@ class AddWordActivity : AppCompatActivity(), CoroutineScope {
         submitButton = findViewById(R.id.submitButton)
         cancelButton = findViewById(R.id.cancelButton)
 
-
         job = Job()
 
         db = AppDatabase.getInstance(this)
-
 
         submitButton.setOnClickListener {
             addWordToDB()
@@ -46,10 +44,6 @@ class AddWordActivity : AppCompatActivity(), CoroutineScope {
         cancelButton.setOnClickListener {
             finish()
         }
-
-
-
-
     }
 
     private fun addWordToDB() {
